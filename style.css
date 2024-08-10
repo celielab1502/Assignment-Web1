@@ -1,187 +1,423 @@
-body{ 
-    background-color: rgb(255, 211, 228);
-    background-image: url(./imgs/clouds.png);
-    background-size: 5%;
-    background-repeat:repeat-x;
-    
-}
-h1{
-    text-align: center;
-    text-transform: uppercase;
-    color: rgb(255, 96, 128);
-    font-size: 34px;
-    font-family: "Amatic SC", sans-serif;
-    font-weight: 700;
-    font-style: normal;
-    font-size: 32pt;
-    
-}
-
-.heading-container{
-    padding-top: 20px;
-    display: flex;
-    justify-content: center;
-    
-}
-
-.navbar {
-    display: flex;
-    justify-content: center;
-    background-color: rgb(255, 190, 220);
-    padding: 10px 0; 
-    margin-bottom: 20px;
-}
-
-.navbar ul {
-    list-style-type: none;
-    display: flex;
-    margin: 0;
+*{
+    margin: 10;
     padding: 0;
 }
+@media only screen and (max-width: 767px){
+    body{ 
+        background-color: rgb(255, 211, 228);
+        background-image: url(./imgs/clouds.png);
+        background-size: 5%;
+        background-repeat:repeat-x;
+        
+    }
+    h1{
+        text-align: center;
+        text-transform: uppercase;
+        color: rgb(255, 96, 128);
+        font-size: 24px;
+        font-family: "Amatic SC", sans-serif;
+        font-weight: 700;
+        font-style: normal;
+        
+    }
 
-.navbar ul li {
-    color: rgb(255, 96, 128);
-    margin: 0 15px; 
-    transition: all 0.4s ease;
-    cursor: pointer;
-    font-family: "Amatic SC", sans-serif;
-    font-weight: 400;
-    font-style: normal;
+    .heading-container{
+        display: flex;
+        justify-content: center;
+        
+    }
+
+    .navbar {
+        display: flex;
+        justify-content: center;
+        background-color: rgb(255, 190, 220);
+        padding: 10px 0; 
+        margin-bottom: 20px;
+        position: relative;
+    }
+    .navbar ul {
+        list-style-type: none;
+        display: flex;
+        margin: 0;
+        padding: 0;
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+        position: absolute;
+        top: 40px; 
+        left: 0;
+        background-color: rgb(255, 190, 220);
+        transform: translateY(-1000%);
+        transition: transform 0.8s ease-in-out;
+    }
+    .navbar ul.show {
+        transform: translateY(0);
+    }
+    .navbar ul li {
+        color: rgb(255, 96, 128);
+        margin: 10px 0; 
+        transition: all 0.4s ease;
+        cursor: pointer;
+        font-family: "Amatic SC", sans-serif;
+        font-weight: 400;
+        font-style: normal;
+    }
+    .navbar ul li a:hover{
+        letter-spacing: 2px;
+        color: rgb(74, 4, 30);
+    }
+    .navbar ul li a {
+        color: rgb(255, 96, 128);
+        text-decoration: none;
+        font-size: 18px;
+        padding: 5px 10px;
+        transition: all 0.4s ease;
+        font-size: 12pt;
+    }
+    .navbar input[type="checkbox"] {
+        display: none;
+    }
+    .navbar label {
+        display: inline-block;
+        cursor: pointer;
+        width: 35px;
+        height: 25px;
+        background-color: rgb(255, 96, 128);
+        border-radius: 5px;
+        position: relative;
+    }
+    .navbar label::before,
+    .navbar label::after {
+        content: "Menu";
+        color: rgb(255, 190, 220);
+        justify-content: center;
+        position: absolute;
+        font-family: "Amatic SC", sans-serif;
+        font-weight: 400;
+        font-style: normal;
+        font-size: 16pt;
+    }
+
+    .navbar input[type="checkbox"]:checked ~ ul {
+        transform: translateY(0);
+    }
+
+    h2 {
+        margin-bottom: 20px;
+        text-align: center;
+        color: rgb(255, 96, 128);
+        font-family: "Amatic SC", sans-serif;
+        font-weight: 600;
+        font-style: normal;
+        font-size: 16pt;
+    }
+
+    .container {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    .container img {
+        max-height: 100vh;
+        margin-bottom: 2%;
+        transition: all 0.4s ease;
+    }
+
+    .container img:hover {
+        opacity: 0.7;
+    }
+    .container-2 {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        padding-top: 5%;
+    }
+    .container-2 img {
+        max-height: 100vh;
+        margin-bottom: 2%;
+        transition: all 0.4s ease;
+    }
+    .container-2 img:hover {
+        opacity: 0.7;
+    }
+
+    img {
+        overflow-clip-margin: content-box;
+        overflow: clip;
+    }
+    .about-container {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+    .about-container p{
+        width: 100%;
+        font-family: "Nunito", sans-serif;
+        font-optical-sizing: auto;
+        font-weight: 300;
+        font-style: normal;
+        color: rgb(74, 4, 30);
+    }
+    .about-container img {
+        max-height: 100vh;
+        margin-bottom: 2%;
+    }
+
+    .about-container img{
+        border: 2px solid rgb(255, 96, 128);
+        border-radius: 10px;
+    }
+
+    .contact-container {
+        background-color: #fff;
+        padding: 20px;
+        border-radius: 10px;
+        width: 50%;
+        max-width: 600px;
+        display: block;
+        text-align: center;
+        margin: auto;
+        border: 2px solid rgb(255, 96, 128);
+    }
+
+    .contact-form {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .contact-form input,
+    .contact-form textarea {
+        padding: 10px;
+        margin-bottom: 10px;
+        border: 1px solid rgb(255, 96, 128);
+        border-radius: 5px;
+        font-size: 12px;
+        font-family: "Nunito", sans-serif;
+        font-optical-sizing: auto;
+        font-weight: 300;
+        font-style: normal;
+    }
+    .contact-form button {
+        padding: 10px;
+        background-color: rgb(255, 96, 128);
+        border: none;
+        color: white;
+        font-size: 12px;
+        border-radius: 5px;
+        cursor: pointer;
+    }
+    .contact-form button:hover {
+        background-color:rgb(74, 4, 30);
+    }
+
+    .footer {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 50px; 
+        color: rgb(255, 96, 128);
+    }
+
+    .footer p {
+        margin: 0;
+        text-align: center;
+        font-family: "Amatic SC", sans-serif;
+        font-weight: 400;
+        font-style: normal;
+    }
 }
 
-.navbar ul li a:hover{
-    letter-spacing: 2px;
-    color: rgb(74, 4, 30);
+/*Web*/
+@media only screen and (min-width: 768px){
+    body{ 
+        background-color: rgb(255, 211, 228);
+        background-image: url(./imgs/clouds.png);
+        background-size: 5%;
+        background-repeat:repeat-x;
+        
+    }
+    h1{
+        text-align: center;
+        text-transform: uppercase;
+        color: rgb(255, 96, 128);
+        font-size: 34px;
+        font-family: "Amatic SC", sans-serif;
+        font-weight: 700;
+        font-style: normal;
+        font-size: 32pt;
+        
+    }
+
+    .heading-container{
+        display: flex;
+        justify-content: center;
+        
+    }
+
+    .navbar {
+        display: flex;
+        justify-content: center;
+        background-color: rgb(255, 190, 220);
+        padding: 10px 0; 
+        margin-bottom: 20px;
+    }
     
-}
+    .navbar input[type="checkbox"] {
+        display: none;
+    }
 
-.navbar ul li a {
-    color: rgb(255, 96, 128);
-    text-decoration: none;
-    font-size: 18px;
-    padding: 5px 10px;
-    transition: all 0.4s ease;
-    font-size: 16pt;
-}
+    .navbar ul {
+        list-style-type: none;
+        display: flex;
+        margin: 0;
+        padding: 0;
+    }
 
-h2 {
-    margin-bottom: 20px;
-    text-align: center;
-    color: rgb(255, 96, 128);
-    font-family: "Amatic SC", sans-serif;
-    font-weight: 600;
-    font-style: normal;
-    font-size: 24pt;
-}
+    .navbar ul li {
+        color: rgb(255, 96, 128);
+        margin: 0 15px; 
+        transition: all 0.4s ease;
+        cursor: pointer;
+        font-family: "Amatic SC", sans-serif;
+        font-weight: 400;
+        font-style: normal;
+    }
 
-.container {
-    display: flex;
-    justify-content: center;
-}
+    .navbar ul li a:hover{
+        letter-spacing: 2px;
+        color: rgb(74, 4, 30);
+        
+    }
 
-.container img {
-    max-height: 53vh;
-    margin: 0% 2%;
-    transition: all 0.4s ease;
-}
+    .navbar ul li a {
+        color: rgb(255, 96, 128);
+        text-decoration: none;
+        font-size: 18px;
+        padding: 5px 10px;
+        transition: all 0.4s ease;
+        font-size: 16pt;
+    }
 
-.container img:hover {
-    opacity: 0.7;
-}
-.container-2 {
-    display: flex;
-    justify-content: center;
-    padding-top: 5%;
-}
-.container-2 img {
-    max-height: 53vh;
-    margin: 0% 2%;
-    transition: all 0.4s ease;
-}
-.container-2 img:hover {
-    opacity: 0.7;
-}
+    h2 {
+        margin-bottom: 20px;
+        text-align: center;
+        color: rgb(255, 96, 128);
+        font-family: "Amatic SC", sans-serif;
+        font-weight: 600;
+        font-style: normal;
+        font-size: 24pt;
+    }
 
-img {
-    overflow-clip-margin: content-box;
-    overflow: clip;
-}
-.about-container {
-    display: flex;
-    justify-content: center;
-}
-.about-container p{
-    width: 35%;
-    font-family: "Nunito", sans-serif;
-    font-optical-sizing: auto;
-    font-weight: 300;
-    font-style: normal;
-    color: rgb(74, 4, 30);
-}
-.about-container img {
-    max-height: 53vh;
-    margin: 0% 2%;
-}
+    .container {
+        display: flex;
+        justify-content: center;
+    }
 
-.about-container img{
-    border: 2px solid rgb(255, 96, 128);
-    border-radius: 10px;
-}
+    .container img {
+        max-height: 53vh;
+        margin: 0% 2%;
+        transition: all 0.4s ease;
+    }
 
-.contact-container {
-    background-color: #fff;
-    padding: 20px;
-    border-radius: 10px;
-    width: 100%;
-    max-width: 600px;
-    display: block;
-    text-align: center;
-    margin: auto;
-    border: 2px solid rgb(255, 96, 128);
-}
+    .container img:hover {
+        opacity: 0.7;
+    }
+    .container-2 {
+        display: flex;
+        justify-content: center;
+        padding-top: 5%;
+    }
+    .container-2 img {
+        max-height: 53vh;
+        margin: 0% 2%;
+        transition: all 0.4s ease;
+    }
+    .container-2 img:hover {
+        opacity: 0.7;
+    }
 
-.contact-form {
-    display: flex;
-    flex-direction: column;
-}
+    img {
+        overflow-clip-margin: content-box;
+        overflow: clip;
+    }
+    .about-container {
+        display: flex;
+        justify-content: center;
+    }
+    .about-container p{
+        width: 35%;
+        font-family: "Nunito", sans-serif;
+        font-optical-sizing: auto;
+        font-weight: 300;
+        font-style: normal;
+        color: rgb(74, 4, 30);
+    }
+    .about-container img {
+        max-height: 53vh;
+        margin: 0% 2%;
+    }
 
-.contact-form input,
-.contact-form textarea {
-    padding: 10px;
-    margin-bottom: 10px;
-    border: 1px solid rgb(255, 96, 128);
-    border-radius: 5px;
-    font-size: 16px;
-    font-family: "Nunito", sans-serif;
-    font-optical-sizing: auto;
-    font-weight: 300;
-    font-style: normal;
-}
-.contact-form button {
-    padding: 10px;
-    background-color: rgb(255, 96, 128);
-    border: none;
-    color: white;
-    font-size: 16px;
-    border-radius: 5px;
-    cursor: pointer;
-}
-.contact-form button:hover {
-    background-color:rgb(74, 4, 30);
-}
+    .about-container img{
+        border: 2px solid rgb(255, 96, 128);
+        border-radius: 10px;
+    }
 
-.footer {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 50px; 
-    color: rgb(255, 96, 128);
-}
+    .contact-container {
+        background-color: #fff;
+        padding: 20px;
+        border-radius: 10px;
+        width: 100%;
+        max-width: 600px;
+        display: block;
+        text-align: center;
+        margin: auto;
+        border: 2px solid rgb(255, 96, 128);
+    }
 
-.footer p {
-    margin: 0;
-    text-align: center;
-    font-family: "Amatic SC", sans-serif;
-    font-weight: 400;
-    font-style: normal;
+    .contact-form {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .contact-form input,
+    .contact-form textarea {
+        padding: 10px;
+        margin-bottom: 10px;
+        border: 1px solid rgb(255, 96, 128);
+        border-radius: 5px;
+        font-size: 16px;
+        font-family: "Nunito", sans-serif;
+        font-optical-sizing: auto;
+        font-weight: 300;
+        font-style: normal;
+    }
+    .contact-form button {
+        padding: 10px;
+        background-color: rgb(255, 96, 128);
+        border: none;
+        color: white;
+        font-size: 16px;
+        border-radius: 5px;
+        cursor: pointer;
+    }
+    .contact-form button:hover {
+        background-color:rgb(74, 4, 30);
+    }
+
+    .footer {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 50px; 
+        color: rgb(255, 96, 128);
+    }
+
+    .footer p {
+        margin: 0;
+        text-align: center;
+        font-family: "Amatic SC", sans-serif;
+        font-weight: 400;
+        font-style: normal;
+    }
 }
