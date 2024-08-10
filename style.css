@@ -56,6 +56,16 @@ h1{
     margin: 0% 2%;
 }
 
+.container-2 {
+    display: flex;
+    justify-content: center;
+    padding-top: 5%;
+}
+.container-2 img {
+    max-height: 53vh;
+    margin: 0% 2%;
+}
+
 img {
     overflow-clip-margin: content-box;
     overflow: clip;
