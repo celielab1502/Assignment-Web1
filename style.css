@@ -10,6 +10,10 @@ h1{
     text-transform: uppercase;
     color: rgb(255, 96, 128);
     font-size: 34px;
+    font-family: "Amatic SC", sans-serif;
+    font-weight: 700;
+    font-style: normal;
+    font-size: 32pt;
     
 }
 
@@ -39,11 +43,16 @@ h1{
     color: rgb(255, 96, 128);
     margin: 0 15px; 
     transition: all 0.4s ease;
+    cursor: pointer;
+    font-family: "Amatic SC", sans-serif;
+    font-weight: 400;
+    font-style: normal;
 }
 
 .navbar ul li a:hover{
     letter-spacing: 2px;
     color: rgb(74, 4, 30);
+    
 }
 
 .navbar ul li a {
@@ -52,6 +61,17 @@ h1{
     font-size: 18px;
     padding: 5px 10px;
     transition: all 0.4s ease;
+    font-size: 16pt;
+}
+
+h2 {
+    margin-bottom: 20px;
+    text-align: center;
+    color: rgb(255, 96, 128);
+    font-family: "Amatic SC", sans-serif;
+    font-weight: 600;
+    font-style: normal;
+    font-size: 24pt;
 }
 
 .container {
@@ -91,30 +111,33 @@ img {
     justify-content: center;
 }
 .about-container p{
-    width: 40%;
+    width: 35%;
+    font-family: "Nunito", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 300;
+    font-style: normal;
+    color: rgb(74, 4, 30);
 }
 .about-container img {
     max-height: 53vh;
     margin: 0% 2%;
 }
 
-h2 {
-    margin-bottom: 20px;
-    color: #333;
-    text-align: center;
+.about-container img{
+    border: 2px solid rgb(255, 96, 128);
+    border-radius: 10px;
 }
 
 .contact-container {
     background-color: #fff;
     padding: 20px;
     border-radius: 10px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     width: 100%;
     max-width: 600px;
     display: block;
     text-align: center;
     margin: auto;
-    
+    border: 2px solid rgb(255, 96, 128);
 }
 
 .contact-form {
@@ -126,13 +149,17 @@ h2 {
 .contact-form textarea {
     padding: 10px;
     margin-bottom: 10px;
-    border: 1px solid #ccc;
+    border: 1px solid rgb(255, 96, 128);
     border-radius: 5px;
     font-size: 16px;
+    font-family: "Nunito", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 300;
+    font-style: normal;
 }
 .contact-form button {
     padding: 10px;
-    background-color: #28a745;
+    background-color: rgb(255, 96, 128);
     border: none;
     color: white;
     font-size: 16px;
@@ -140,7 +167,7 @@ h2 {
     cursor: pointer;
 }
 .contact-form button:hover {
-    background-color: #218838;
+    background-color:rgb(74, 4, 30);
 }
 
 .footer {
@@ -154,4 +181,7 @@ h2 {
 .footer p {
     margin: 0;
     text-align: center;
+    font-family: "Amatic SC", sans-serif;
+    font-weight: 400;
+    font-style: normal;
 }
