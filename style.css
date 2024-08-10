@@ -3,6 +3,7 @@ body{
     background-image: url(./imgs/clouds.png);
     background-size: 5%;
     background-repeat:repeat-x;
+    
 }
 h1{
     text-align: center;
@@ -37,6 +38,12 @@ h1{
 .navbar ul li {
     color: rgb(255, 96, 128);
     margin: 0 15px; 
+    transition: all 0.4s ease;
+}
+
+.navbar ul li a:hover{
+    letter-spacing: 2px;
+    color: rgb(74, 4, 30);
 }
 
 .navbar ul li a {
@@ -44,6 +51,7 @@ h1{
     text-decoration: none;
     font-size: 18px;
     padding: 5px 10px;
+    transition: all 0.4s ease;
 }
 
 .container {
@@ -54,8 +62,12 @@ h1{
 .container img {
     max-height: 53vh;
     margin: 0% 2%;
+    transition: all 0.4s ease;
 }
 
+.container img:hover {
+    opacity: 0.7;
+}
 .container-2 {
     display: flex;
     justify-content: center;
@@ -64,11 +76,71 @@ h1{
 .container-2 img {
     max-height: 53vh;
     margin: 0% 2%;
+    transition: all 0.4s ease;
+}
+.container-2 img:hover {
+    opacity: 0.7;
 }
 
 img {
     overflow-clip-margin: content-box;
     overflow: clip;
+}
+.about-container {
+    display: flex;
+    justify-content: center;
+}
+.about-container p{
+    width: 40%;
+}
+.about-container img {
+    max-height: 53vh;
+    margin: 0% 2%;
+}
+
+h2 {
+    margin-bottom: 20px;
+    color: #333;
+    text-align: center;
+}
+
+.contact-container {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 600px;
+    display: block;
+    text-align: center;
+    margin: auto;
+    
+}
+
+.contact-form {
+    display: flex;
+    flex-direction: column;
+}
+
+.contact-form input,
+.contact-form textarea {
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+}
+.contact-form button {
+    padding: 10px;
+    background-color: #28a745;
+    border: none;
+    color: white;
+    font-size: 16px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+.contact-form button:hover {
+    background-color: #218838;
 }
 
 .footer {
